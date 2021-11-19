@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap');
+.navegar {
+    height: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content:center; 
+    padding: 24px 40px
+}
+
+.textnav h2 {
+    color: rgb(255, 51, 0);
+    font-weight:900px;
+    margin:auto;
+    font-family: 'Poppins', sans-serif;
+    font-style:italic;
+   
+}
+.Buttonnav{
+    width: 89px;
+    height: 40px;
+    margin: auto 5px;
+    background-color:rgb(230, 154, 12);
+    color:white;
+    border-radius:8px;
+    border:1px solid;
+    border-color:transparent;
+}
+
+.containercard1{
+    
+    direction: column;
+    padding: 0 40px;
+    width:100%;
+    height: 560px;
+    margin: 40px 0;
+
+}
+.containercard2{
+    direction: column;
+    padding: 0 40px;
+    width: 100%;
+    height: 560px;
+    margin: 40px 0;
+}
+
+.textcontcard1{
+
+    width: 76px;
+    height: 22px;
+    font-Size: 20px;
+    line-Height: 22px;
+    margin: 40px 0px;
+
+}
+.textcontcard2{
+    width: 196px;
+    height: 22px;
+    font-Size: 20px;
+    line-Height: 22px;
+    margin: 40px 0px;
+    
+}
+
+.supercontainer{
+   display: flex;
+   background-color:transparent;
+   width:100%;
+   height: auto;
+   flex-direction:column
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction:row;
+   
+}
+
+.cardtext1{
+    color:rgb(92, 40, 92);
+    font-weight: bold;
+    background-color: rgb(236, 172, 70);
+}
