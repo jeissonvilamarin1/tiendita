@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
 import { Container } from "../components/container/Container";
 import { url } from "../helpers/urls";
-
+import { ModalProduct } from "../components/Modal";
 
 export const AppRouter = () => {
 
@@ -25,6 +25,7 @@ export const AppRouter = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<Container productos={productos}/>} />
+          <Route path="/producto/:id" element={<ModalProduct productos={productos}/>} />
         </Routes>
       </BrowserRouter>
     </div>
