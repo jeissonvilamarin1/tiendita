@@ -1,20 +1,21 @@
 import React from 'react'
 import { Card, Button, Container } from 'react-bootstrap';
 
-export const Cards = () => {
+export const Cards = ({productos}) => {
     return (
       <Container>
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
+          {productos.map(p =>(
+                <Card style={{ width: "18rem" }}>
+                <Card.Img variant="top" src={p.image} />
+                <Card.Body>
+                    <Card.Title>{p.description}</Card.Title>
+                    <Card.Text>
+                    $ {p.price}/kg   {p.prices}/kg
+                    </Card.Text>
+                    <Button variant="primary">Agregar</Button>
+                </Card.Body>
+                </Card>
+          ) )}
       </Container>
     );
 }

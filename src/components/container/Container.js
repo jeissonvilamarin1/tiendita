@@ -2,11 +2,11 @@ import React from 'react'
 import { Cards } from '../Cards'
 import { Slider } from '../Slider'
 
-export const Container = () => {
+export const Container = ({productos}) => {
     return (
         <div>
             <Slider/>
-            <Cards/>
+            <Cards productos={productos}/>
         </div>
     )
 }
