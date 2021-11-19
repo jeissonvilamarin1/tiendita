@@ -1,0 +1,1 @@
+export const url = "https://tienditaofertadedatos.herokuapp.com/OfertasDatos";

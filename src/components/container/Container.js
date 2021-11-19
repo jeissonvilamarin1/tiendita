@@ -1,9 +1,12 @@
 import React from 'react'
+import { Cards } from '../Cards'
+import { Slider } from '../Slider'
 
 export const Container = () => {
     return (
         <div>
-            <h1>Hola</h1>
+            <Slider/>
+            <Cards/>
         </div>
     )
 }

@@ -1,21 +1,17 @@
 import React from 'react'
-import { Container, Nav, Navbar, Button, Row, Col } from 'react-bootstrap';
+import { Container, Navbar, Button, Row, Col } from 'react-bootstrap';
 
 export const NavBar = () => {
     return (
       <div>
         <Navbar bg="light" variant="light">
-          <Container>
+          <Container fluid>
             <Row>
-              <Col xs={10} md={8} xl={8}>
-                <Navbar.Brand href="#home" bg="light">
-                  Tiendita
-                </Navbar.Brand>
+              <Col xs={10} md={8} xl={8} lg={8}>
+                Tiendita
               </Col>
-              <Col xs={2} md={4} xl={4}>
-                <Nav className="me-auto">
-                  <Button variant="success">Carrito</Button>
-                </Nav>
+              <Col xs={2} md={4} xl={4} lg={4}>
+                <Button variant="success">Carrito</Button>
               </Col>
             </Row>
           </Container>
