@@ -8,7 +8,7 @@ export const NavBar = () => {
           <Container fluid>
             <Row>
               <Col xs={10} md={8} xl={8} lg={8}>
-                Tiendita
+                Tiendita Edith
               </Col>
               <Col xs={2} md={4} xl={4} lg={4}>
                 <Button variant="success">Carrito</Button>
