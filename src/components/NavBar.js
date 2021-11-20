@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Badge, Navbar, Button, Row, Col } from 'react-bootstrap';
+import { Container, Navbar } from 'react-bootstrap';
 import { BiCart } from "react-icons/bi";
 import '../styles/principal.css';
 

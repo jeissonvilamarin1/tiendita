@@ -80,3 +80,8 @@
     font-weight: bold;
     background-color: rgb(236, 172, 70);
 }
+.card-product{
+    margin: 5px;
+    width: 200px;
+    height: 400px;
+}

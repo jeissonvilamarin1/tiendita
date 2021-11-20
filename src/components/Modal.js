@@ -1,28 +1,38 @@
-import React from "react";
+import React from 'react'
 import { Modal, Button } from "react-bootstrap";
 
-
-export const ModalProduct = (props) => {
-
-  return (
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-          hdhhdhdhdhdh
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Close</Button>
-      </Modal.Footer>
-    </Modal>
-  );
+export const ModalProduct = ({setShow, show, product, actual}) => {
+    console.log(actual)
+    console.log(product)
+    const handleClose = () => setShow(false);
+    let buscado = []
+    buscado = product.find(p => p.id === Number(actual))
+    console.log(buscado)
+    return (
+      <>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body>
+            <div className="containerProduct">
+              <img src={buscado.image} alt="" />
+              <div className="product-info">
+                <h1>{buscado.description}</h1>
+                <h2>{buscado.price} /kg</h2>
+                <p>Precios con IVA incluido</p>
+                <p>
+                  Peso aproximado por pieza, puede variar de acuerdo al peso
+                  real
+                </p>
+              </div>
+              <Button variant="success">Agregar</Button>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </>
+    );
 }
-
