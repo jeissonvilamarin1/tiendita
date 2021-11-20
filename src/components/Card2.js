@@ -17,7 +17,25 @@ export const Card2 = ({ populares }) => {
     buscado = e.target.id;
     setActual(buscado);
     return buscado;
-  };
+  }
+
+  const onSearchid = (e) => {
+    console.log(e.target.id);
+    const itemName=e.target.id;
+    const Todos = populares.find(todo => todo.description===itemName);
+    const localStorageItem = localStorage.getItem("items");
+    let parsedItem=[];
+    if (!!localStorageItem) {
+       parsedItem = JSON.parse(localStorage.getItem("items"))
+       parsedItem.push(Todos)
+      localStorage.setItem("items", JSON.stringify(parsedItem));
+      JSON.parse(localStorageItem)
+      parsedItem =Todos;
+    } else {
+        parsedItem.push(Todos)
+        localStorage.setItem("items", JSON.stringify(parsedItem));
+    }}
+
   return (
     <Container className="cardcontainer">
       {populares.map((p) => (
@@ -36,7 +54,7 @@ export const Card2 = ({ populares }) => {
             </Card.Text>
             <Button
               style={{ backgroundColor: "rgb(230, 154, 12)" }}
-              variant="primary"
+              variant="primary" id={p.description} onClick={(e)=>onSearchid(e)}
             >
               Agregar
             </Button>
@@ -53,5 +71,5 @@ export const Card2 = ({ populares }) => {
         actual={actual}
       />
     </Container>
-  );
-};
+  );     
+}

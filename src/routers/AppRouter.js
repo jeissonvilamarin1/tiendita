@@ -5,6 +5,7 @@ import { NavBar } from "../components/NavBar";
 import { Container } from "../components/container/Container";
 import { url } from "../helpers/urls";
 import { url2 } from "../helpers/urls";
+import {Carrito} from "../components/Carrito"
 
 
 export const AppRouter = () => {
@@ -33,6 +34,8 @@ export const AppRouter = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<Container productos={productos} populares={populares}/>} />
+          <Route path="/carrito" element={<Carrito/>} />
+       
         </Routes>
       </BrowserRouter>
     </div>

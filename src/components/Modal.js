@@ -13,11 +13,11 @@ export const ModalProduct = ({setShow, show, product, actual}) => {
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
-            <div className="containerProduct">
-              <img src={buscado.image} alt="" />
+          <div className="containerProduct">
+              <img src={actual.image} alt="" />
               <div className="product-info">
-                <h1>{buscado.description}</h1>
-                <h2>{buscado.price} /kg</h2>
+                <h1>{actual.description}</h1>
+                <h2>{actual.price} /kg</h2>
                 <p>Precios con IVA incluido</p>
                 <p>
                   Peso aproximado por pieza, puede variar de acuerdo al peso

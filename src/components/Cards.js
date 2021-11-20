@@ -12,6 +12,25 @@ export const Cards = ({productos}) => {
 
     let buscado = [...productos];
 
+    const onSearchid = (e) => {
+        console.log(e.target.id);
+        const itemName=e.target.id;
+        const Todos = productos.find(todo => todo.description===itemName);
+        const localStorageItem = localStorage.getItem("items");
+        let parsedItem=[];
+        if (!!localStorageItem) {
+           parsedItem = JSON.parse(localStorage.getItem("items"))
+           parsedItem.push(Todos)
+          localStorage.setItem("items", JSON.stringify(parsedItem));
+          JSON.parse(localStorageItem)
+          parsedItem =Todos;
+        } else {
+            parsedItem.push(Todos)
+            localStorage.setItem("items", JSON.stringify(parsedItem));
+        }
+    
+    };
+
     const handleClick = (e) =>{ 
       e.preventDefault()
       buscado=1;
@@ -20,8 +39,7 @@ export const Cards = ({productos}) => {
        return buscado;
     }
 
-    console.log(buscado)
-    return (
+    return(
       <>
         <Container className="cardcontainer">
           {productos.map((p) => (
@@ -41,7 +59,7 @@ export const Cards = ({productos}) => {
                 </Card.Text>
                 <Button
                   style={{ backgroundColor: "rgb(230, 154, 12)" }}
-                  variant="primary"
+                  variant="primary" id={p.description} onClick={(e)=>onSearchid(e)}
                 >
                   Agregar
                 </Button>

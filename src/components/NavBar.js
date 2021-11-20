@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Navbar } from 'react-bootstrap';
 import { BiCart } from "react-icons/bi";
 import '../styles/principal.css';
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -11,12 +12,13 @@ export const NavBar = () => {
           <Container fluid className="navegar">
        
               <div className="textnav">
-               <h2>Tiendita</h2>  
+              <Link to={`/`}>  <h2>Tiendita</h2>  </Link>  
               </div>
-              <div>   
+              <div> 
+              <Link to={`/carrito`}>
               <button className="Buttonnav">              
               <BiCart style={{ width: "28px", height: "28px", }} />
-                        <span>9</span></button>
+                        <span>9</span></button></Link>  
               </div>
        
           </Container>
